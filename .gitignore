@@ -1,18 +1,36 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+*.swp
+*.swo
 
-# Other files and folders
-.settings/
+# Logs
+logs
+*.log
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Runtime data
+pids
+*.pid
+*.seed
+allFiredEvents
+scTopics
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Coverage directory used by tools like istanbul
+coverage
+coverage.json
+coverageEnv
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directory
+node_modules
+
+# Debug log from npm
+npm-debug.log
+
+# local env variables
+.env
+
+# truffle build directory
+build/
+
+# lol macs
+.DS_Store/
