@@ -11,9 +11,20 @@ contract GuessAge {
         age = _age;
     }
 
-    function readTheQuestion () public pure returns (string question) {
+    //adds ether to contract
+    function fundContract () payable public {
+    }
+
+    //practice call
+    function readTheQuestion () public pure returns (bytes32 question) {
         question = "Guess my Age";
     }
+
+    //event
+    event GuessMade(
+       address guesser,
+       uint amount
+    );
 
     //send your guess here
     function sendGuess (uint _guess) payable public returns (uint _returnAmount) {
@@ -36,5 +47,7 @@ contract GuessAge {
         } else if (_difference <= 5 && _difference > 0) {
             msg.sender.transfer(_returnAmount * oneWei);
         }
+
+        GuessMade(msg.sender, _guess);
     }
 }
